@@ -1,0 +1,135 @@
+/* pages/songDetail/songDetail.wxss */
+.songDetailContainer{
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* 摇杆 */
+.needle{
+    position: relative;
+    top:-40rpx;
+    z-index: 10;
+    left: 60rpx;
+    width: 192rpx;
+    height:274rpx;
+    /* 旋转动画 */
+    /* 转中心点默认为对角线交点，先设置旋转中心点 */
+    transform-origin: 40rpx 0;
+    transform: rotate(-30deg); 
+    /* 过渡动画 */
+    transition:transform 1s;
+}
+.rotate{
+    /* 旋转动画 */
+    /* 转中心点默认为对角线交点，先设置旋转中心点 */
+    transform-origin: 40rpx 0;
+    transform: rotate(0deg); 
+}
+/* 底座 */
+.circle{
+    width: 60rpx;
+    height:60rpx;
+    z-index: 20;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 10rpx 0;
+    
+
+}
+.discContainer{
+    position: relative;
+    top:-170rpx;
+    height: 598rpx;
+    width: 598rpx;
+}
+/* 磁盘 */
+.disc{
+    height: 598rpx;
+    width: 598rpx;
+}
+/* 磁盘旋转动画 */
+.dicAnimation{
+    animation: disc 10s linear infinite;
+    animation-delay:1s ;
+}
+/* 设置动画帧，百分比（复杂动画，不止两桢，可以任意拆分）
+和from to（简单动画、起始桢，结束桢） */
+ @keyframes disc{
+    from{
+        transform:rotate(0deg)}
+    to{
+        transform:rotate(360deg)}
+ }
+
+.image{
+    position:absolute;
+    top:0;
+    right: 0;
+    left:0;
+    bottom: 0;
+    margin:auto;
+    height: 370rpx;
+    width: 370rpx;
+    border-radius: 50%;
+}
+
+.musicControl {
+    position: absolute;
+    bottom: 15rpx;
+    left:0;
+    width: 100%;
+    display: flex;
+    border-top:1rpx solid #fff;
+    justify-content: space-between;
+    align-items: center;
+    height: 100rpx;
+    
+}
+.musicControl text{
+    font-size: 50rpx;
+    color:#fff
+
+}
+.musicControl .big{
+    font-size: 80rpx;
+}
+
+/* 进度条控制 */
+.processControl{
+    height: 80rpx;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    color:black;
+    align-items: center;
+}
+.processControl .barControl{
+    box-sizing: border-box;
+    width: 70%;
+    height: 2rpx;
+    border-bottom: 2rpx solid rgb(8, 8, 8);
+    margin:auto;
+}
+.barControl .currentBar{
+    position: relative;
+    height: 4rpx;
+    border-top: 4rpx solid rgb(253, 7, 7);
+    /* 进度变化的 */
+
+}
+.barControl .currentBar .ball{
+    position: absolute;
+    top:-160%;
+    /* 位置变动的 */
+    left: 100%;
+    height: 10rpx;
+    width: 10rpx;
+    background-color: #fff;
+    border-radius:50% ;
+}
+.processControl text{
+    font-size: 30rpx;
+}

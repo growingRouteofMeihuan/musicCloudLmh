@@ -1,0 +1,13 @@
+/**app.wxss**/
+/* 由于全局多个地方需要引入，所以全局引入iconfont */
+@import "/static/iconfont/iconfont.wxss";
+page {height:100%;}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 

@@ -1,0 +1,23 @@
+/* components/Navheader/Navheader.wxss */
+ .header .title{
+    font-size: 26rpx;
+    line-height: 40rpx;
+    color:rgb(71, 70, 70)
+  }
+  
+  .header .title2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size:32rpx;
+    margin-top: 10rpx;
+  }
+
+  .header .more{
+    font-size: 20rpx;
+    height: 20rpx;
+    padding:10rpx 10rpx;
+    line-height: 20rpx;
+    border:1rpx solid rgb(17, 22, 80);
+    border-radius: 20rpx;
+  }

@@ -1,0 +1,130 @@
+/* pages/video/video.wxss */
+/* 头部搜索区 */
+.videoContainer .header{
+    display: flex;
+    justify-content: space-between;
+    height: 60rpx;
+    margin:10rpx 10rpx;}
+
+.videoContainer .header image{
+    height: 60rpx;
+    width: 60rpx;
+    
+}
+.videoContainer .header .search{
+    /* flex-grow:是否可拉伸，默认值0不可拉伸，大于0则是元素多余空间分配的比例
+    flex-shrink：是否可压缩，0（不可压缩），默认值1可压缩
+      flex-basic：当前元素宽度，默认值auto，它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。
+      flex默认值：0（不可拉伸） 1可压缩 auto
+      flex:1  其余默认
+       */
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    font-size: 30rpx;
+    border: 2rpx solid #eee;
+    border-radius: 10rpx;
+    flex:1 1 auto;
+    margin: 0 30rpx;
+    color:#d43c33;
+}
+
+/* 横向导航栏 */
+.navScroll{
+    display: flex;
+    white-space: nowrap;
+    height: 70rpx;
+    margin-left:30rpx ;
+}
+.navScroll .navItem {
+    margin: 0 30rpx;
+    height: 60rpx;
+    font-size: 28rpx;
+    line-height: 60rpx;
+}
+.navItem .active{
+    border-bottom: 2rpx solid #d43c33;
+}
+
+.videoScroll{
+    margin-top:10rpx;
+    /* 视口单位：vh、vw，1vh=%1的视口高度，1vw=%1的视口宽度 */
+    /* 注意：calc(100vh - 152rpx)减号左右两边要有空格才可以生效 */
+    height:calc(100vh - 170rpx)
+    
+}
+/* 视频列表样式 */
+.videoItem{
+    padding:20rpx 3%;
+    
+}
+.videoItem video{
+    width: 100%;
+
+}
+
+.videoItem .common {
+    width: 100%;
+    height: 360rpx;
+    border-radius: 10rpx;
+  }
+
+/* .common:hover{
+  box-shadow: rgb(223, 33, 33);
+  border-radius: 50%;
+} */
+
+  .videoItem .content {
+    font-size: 26rpx;
+    height:80rpx;
+    line-height: 80rpx;
+    max-width: 500rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* footer */
+  .footer {
+    border-top: 1rpx solid #eee;
+    padding: 20rpx 0;
+  }
+  .footer .avatar {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+  
+  .footer  .nickName {
+    font-size: 26rpx;
+    vertical-align: middle;
+    margin-left: 20rpx;
+  }
+  
+  .footer .comments_praised {
+    float: right;
+  }
+  
+  .comments_praised .btn {
+    display: inline;
+    padding: 0;
+    background-color: transparent;
+    border-color: transparent;
+  }
+  
+  .comments_praised .btn:after {
+    border: none;
+  }
+  
+  .comments_praised .item {
+    margin-left: 50rpx;
+    position: relative;
+  }
+  
+  .comments_praised .item .count {
+    position: absolute;
+    top: -20rpx;
+    font-size: 20rpx;
+  }
+  

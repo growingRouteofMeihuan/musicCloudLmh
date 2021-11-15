@@ -1,0 +1,96 @@
+/* pages/recommendSong/recommendSong.wxss */
+.recommendSongContainer{
+    position: relative;
+    height: 100%;
+}
+/* 头部样式 */
+.header{
+    height: 300rpx;
+    width:100%;
+    position:relative;
+}
+.header image{
+    width:100%;
+    height:100%
+}
+.header .date{
+    height: 100rpx;
+    width: 200rpx;
+    position: absolute;
+    top:50%;
+    left:50%;
+    /* margin-top:-50rpx;
+    margin-left:-50rpx; */
+    transform:translate(-50%,-50%);
+    text-align: center;
+    line-height: 100rpx;
+    color:#fff;
+    /* border:2rpx solid black; */
+}
+
+.header .date .day{
+    font-size:60rpx ;
+}
+
+/* 播放列表样式 */
+.listContainer{
+    position:absolute;
+    top:280rpx;
+    width: 100%;
+    background-color: #fff;
+    border-radius:50rpx;
+    
+}
+.listContainer .listHeader{
+    margin:10rpx 20rpx ;
+    height: 80rpx;
+    font-size: 30rpx;
+    line-height: 80rpx;
+}
+.listContainer .listHeader .chooseMore{
+    float:right;
+}
+
+/* 播放列表内容区 */
+.scrollContainer{
+    display:flex;
+    flex-direction: column;
+    margin:0 20rpx;
+    height: calc(100vh - 380rpx);
+}
+.scrollContainer .itemContainer{
+    margin-bottom: 20rpx;
+}
+.itemContainer:after{
+    content:"";
+    display:block;
+    height: 0;
+    clear:both;
+    visibility: hidden;
+}
+.scrollContainer .itemContainer image{
+    height: 80rpx;
+    width: 80rpx;
+    float: left;
+    border-radius: 8rpx;
+}
+.scrollContainer .itemContainer .content{
+    float: left;
+    margin-left: 20rpx;
+}
+.scrollContainer .itemContainer .content view{
+    height: 40rpx;
+    line-height: 40rpx;
+    max-width: 400rpx;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 30rpx;
+}
+.scrollContainer .itemContainer .item{
+    float: right;
+    width: 30rpx;
+    height: 80rpx;
+    margin-right: 25rpx;
+    /* background-color: #fff; */
+}
